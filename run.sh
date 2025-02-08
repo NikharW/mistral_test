@@ -1,6 +1,6 @@
 #!/bin/bash
 
-batch_size=(250 250 500 1000)
+batch_size=(2 2 2 2)
 
 for i in {0..3}; do
   CUDA_VISIBLE_DEVICES=$i BATCH_SIZE=${batch_size[$i]} MODEL_NUM=$i ./evaluate_memorization.sh &
