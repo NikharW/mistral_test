@@ -2,7 +2,7 @@
 
 # Step 1: Run batch_eval.py with the baseline config
 echo "Running baseline batch evaluation..."
-python batch_eval.py --model-config configs/models_$MODEL_NUM.json --quant-config configs/baseline-config.json --dataset "legacy-datasets/wikipedia" --num-samples 2 --batch-size $BATCH_SIZE
+python batch_eval.py --model-config configs/model_$MODEL_NUM.json --quant-config configs/baseline-config.json --dataset "legacy-datasets/wikipedia" --num-samples 2 --batch-size $BATCH_SIZE
 
 # Step 2: Merge all JSON files into merged.json
 echo "Merging all JSON files into merged.json..."
