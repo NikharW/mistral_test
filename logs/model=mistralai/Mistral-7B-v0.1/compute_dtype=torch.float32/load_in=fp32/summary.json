@@ -118,5 +118,13 @@
         "Index List": [],
         "Outlier List": [],
         "Total Samples": 2
+    },
+    "Model=mistralai/Mistral-7B-v0.1_Context=500_Target=500": {
+        "Context Length": 500,
+        "Target Length": 500,
+        "Memorized Ratio": 0.0,
+        "Index List": [],
+        "Outlier List": [],
+        "Total Samples": 2
     }
 }
