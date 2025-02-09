@@ -37,4 +37,4 @@ echo "Begginnig github push..."
 git remote -v
 git add logs
 git commit -m "Auto update results added" || echo "commit failed"
-git push origin_2 main || echo "git push failed"
+git push -u origin main || echo "git push failed"
