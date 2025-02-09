@@ -5,7 +5,7 @@
         "Memorized Ratio": 0.0,
         "Index List": [],
         "Outlier List": [],
-        "Total Samples": 2
+        "Total Samples": 3
     },
     "Model=meta-llama/Llama-3.1-8B_Context=50_Target=100": {
         "Context Length": 50,
@@ -13,6 +13,6 @@
         "Memorized Ratio": 0.0,
         "Index List": [],
         "Outlier List": [],
-        "Total Samples": 2
+        "Total Samples": 3
     }
 }
