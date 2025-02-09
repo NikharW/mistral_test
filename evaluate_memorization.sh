@@ -7,7 +7,6 @@ python batch_eval.py --model-config configs/models_$MODEL_NUM.json --quant-confi
 # Step 2: Merge all JSON files into merged.json
 echo "Merging all JSON files into merged.json..."
 find . -name "summary.json" -type f -exec cat {} + | jq -s '.' > ./logs/merged.json
-echo "beginning github push...."
 
 echo "Merged JSON files successfully."
 
@@ -34,3 +33,9 @@ for swap in "${swap_values[@]}"; do
 done
 
 echo "All evaluations completed."
+echo "Begginnig github push..."
+echo "gh token: $GITHUB_TOKEN"
+git remote -v
+git add logs
+git commit -m "Auto update results added" || echo "commit failed"
+git push origin_2 main || echo "git push failed"
