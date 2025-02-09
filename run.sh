@@ -1,6 +1,6 @@
 #!/bin/bash
 
-batch_size=(3 3 3 3)
+batch_size=(250 250 500 1000)
 
 # Launch all evaluations in parallel
 for i in {0..3}; do
