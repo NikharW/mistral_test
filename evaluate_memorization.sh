@@ -34,7 +34,6 @@ done
 
 echo "All evaluations completed."
 echo "Begginnig github push..."
-echo "gh token: $GITHUB_TOKEN"
 git remote -v
 git add logs
 git commit -m "Auto update results added" || echo "commit failed"
