@@ -26,7 +26,7 @@ for swap in "${swap_values[@]}"; do
     python batch_eval.py --model-config configs/models_$MODEL_NUM.json \
                          --quant-config configs/quant-config.json \
                          --quant-config-swap configs/quant-config.json \
-                         --num-samples 10000 \
+                         --num-samples 2 \
                          --batch-size $BATCH_SIZE \
                          --baseline-memorized logs/merged.json \
                          --swap-every "$swap"
