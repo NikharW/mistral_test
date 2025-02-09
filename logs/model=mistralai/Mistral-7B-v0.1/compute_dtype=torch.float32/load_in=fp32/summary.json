@@ -5,7 +5,7 @@
         "Memorized Ratio": 0.0,
         "Index List": [],
         "Outlier List": [],
-        "Total Samples": 2
+        "Total Samples": 3
     },
     "Model=mistralai/Mistral-7B-v0.1_Context=50_Target=100": {
         "Context Length": 50,
@@ -13,7 +13,7 @@
         "Memorized Ratio": 0.0,
         "Index List": [],
         "Outlier List": [],
-        "Total Samples": 2
+        "Total Samples": 3
     },
     "Model=mistralai/Mistral-7B-v0.1_Context=50_Target=200": {
         "Context Length": 50,
@@ -21,7 +21,7 @@
         "Memorized Ratio": 0.0,
         "Index List": [],
         "Outlier List": [],
-        "Total Samples": 2
+        "Total Samples": 3
     },
     "Model=mistralai/Mistral-7B-v0.1_Context=50_Target=500": {
         "Context Length": 50,
@@ -29,7 +29,7 @@
         "Memorized Ratio": 0.0,
         "Index List": [],
         "Outlier List": [],
-        "Total Samples": 2
+        "Total Samples": 3
     },
     "Model=mistralai/Mistral-7B-v0.1_Context=100_Target=50": {
         "Context Length": 100,
@@ -37,7 +37,7 @@
         "Memorized Ratio": 0.0,
         "Index List": [],
         "Outlier List": [],
-        "Total Samples": 2
+        "Total Samples": 3
     },
     "Model=mistralai/Mistral-7B-v0.1_Context=100_Target=100": {
         "Context Length": 100,
@@ -45,86 +45,6 @@
         "Memorized Ratio": 0.0,
         "Index List": [],
         "Outlier List": [],
-        "Total Samples": 2
-    },
-    "Model=mistralai/Mistral-7B-v0.1_Context=100_Target=200": {
-        "Context Length": 100,
-        "Target Length": 200,
-        "Memorized Ratio": 0.0,
-        "Index List": [],
-        "Outlier List": [],
-        "Total Samples": 2
-    },
-    "Model=mistralai/Mistral-7B-v0.1_Context=100_Target=500": {
-        "Context Length": 100,
-        "Target Length": 500,
-        "Memorized Ratio": 0.0,
-        "Index List": [],
-        "Outlier List": [],
-        "Total Samples": 2
-    },
-    "Model=mistralai/Mistral-7B-v0.1_Context=200_Target=50": {
-        "Context Length": 200,
-        "Target Length": 50,
-        "Memorized Ratio": 0.0,
-        "Index List": [],
-        "Outlier List": [],
-        "Total Samples": 2
-    },
-    "Model=mistralai/Mistral-7B-v0.1_Context=200_Target=100": {
-        "Context Length": 200,
-        "Target Length": 100,
-        "Memorized Ratio": 0.0,
-        "Index List": [],
-        "Outlier List": [],
-        "Total Samples": 2
-    },
-    "Model=mistralai/Mistral-7B-v0.1_Context=200_Target=200": {
-        "Context Length": 200,
-        "Target Length": 200,
-        "Memorized Ratio": 0.0,
-        "Index List": [],
-        "Outlier List": [],
-        "Total Samples": 2
-    },
-    "Model=mistralai/Mistral-7B-v0.1_Context=200_Target=500": {
-        "Context Length": 200,
-        "Target Length": 500,
-        "Memorized Ratio": 0.0,
-        "Index List": [],
-        "Outlier List": [],
-        "Total Samples": 2
-    },
-    "Model=mistralai/Mistral-7B-v0.1_Context=500_Target=50": {
-        "Context Length": 500,
-        "Target Length": 50,
-        "Memorized Ratio": 0.0,
-        "Index List": [],
-        "Outlier List": [],
-        "Total Samples": 2
-    },
-    "Model=mistralai/Mistral-7B-v0.1_Context=500_Target=100": {
-        "Context Length": 500,
-        "Target Length": 100,
-        "Memorized Ratio": 0.0,
-        "Index List": [],
-        "Outlier List": [],
-        "Total Samples": 2
-    },
-    "Model=mistralai/Mistral-7B-v0.1_Context=500_Target=200": {
-        "Context Length": 500,
-        "Target Length": 200,
-        "Memorized Ratio": 0.0,
-        "Index List": [],
-        "Outlier List": [],
-        "Total Samples": 2
-    },
-    "Model=mistralai/Mistral-7B-v0.1_Context=500_Target=500": {
-        "Context Length": 500,
-        "Target Length": 500,
-        "Memorized Ratio": 0.0,
-        "Index List": [],
-        "Outlier List": [],
-        "Total Samples": 2
+        "Total Samples": 3
     }
 }
