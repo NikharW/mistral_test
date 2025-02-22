@@ -1,0 +1,7 @@
+[
+    {
+        "model_name": "EleutherAI/pythia-160m",
+        "model_family": "llama",
+        "model_path": "/path/to/model"
+    }
+]
