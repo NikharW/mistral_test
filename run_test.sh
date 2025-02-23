@@ -1,6 +1,6 @@
 #!/bin/bash
 
-batch_size=$2
+batch_size=$3
 MODEL_CONFIG="configs/model.json"
 
 echo "Running evaluation with batch size: $batch_size and model: $MODEL_CONFIG"
