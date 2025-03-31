@@ -2,7 +2,7 @@
 
 # Step 1: Run batch_eval.py with the baseline config
 echo "Running baseline batch evaluation..."
-python batch_push.py --model-config configs/model.json --quant-config configs/baseline-config.json --dataset "monology/pile-uncopyrighted" --num-samples 10000 --batch-size $BATCH_SIZE
+python batch_push.py --model-config configs/model.json --quant-config configs/baseline-config.json --dataset "monology/pile-uncopyrighted" --num-samples 10000 --batch-size 250
 
 # Step 2: Merge all JSON files into merged.json
 echo "Merging all JSON files into merged.json..."
@@ -27,7 +27,7 @@ for swap in "${swap_values[@]}"; do
                          --quant-config configs/quant-config.json \
                          --quant-config-swap configs/quant-config.json \
                          --num-samples 10000 \
-                         --batch-size $BATCH_SIZE \
+                         --batch-size 250 \
                          --baseline-memorized logs/merged.json \
                          --swap-every "$swap"
 done
