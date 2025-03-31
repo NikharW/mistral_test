@@ -19,7 +19,7 @@ import torch.distributed as dist
 from rouge_score import rouge_scorer
 
 from transformers import (
-    AutoModelForCausalLM,
+    AutoModelForCausalLM,`
     AutoTokenizer,
     BitsAndBytesConfig,
     logging
@@ -115,7 +115,7 @@ class MemorizationAnalyser:
         swap_every: Optional[List[str]],
         dataset_name: str = "legacy-datasets/wikipedia",
         batch_size: int = 128,
-        device_map: Literal["cpu", "auto", "balanced"] = "balanced",
+        device_map: Literal["cpu", "auto", "balanced"] = "auto",
         dtype_map: Dict = create_dtype_map(),
     ):
         if layer_swap_config is not None and swap_every is not None:
