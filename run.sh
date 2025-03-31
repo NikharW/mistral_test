@@ -1,8 +1,10 @@
 #!/bin/bash
 
-BATCH_SIZE = 250
+# Define fixed batch size
+BATCH_SIZE=250
 
-CUDA_VISIBLE_DEVICES=0 ./evaluate_memorization.sh
+# Set environment variable and CUDA device for evaluate_memorization.sh
+CUDA_VISIBLE_DEVICES=0 BATCH_SIZE=$BATCH_SIZE ./evaluate_memorization.sh
 
 # Wait for all background processes to complete
 wait
