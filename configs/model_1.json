@@ -1,0 +1,7 @@
+[
+    {
+        "model_name": "EleutherAI/pythia-410m",
+        "model_family": "pythia",
+        "model_path": "/path/to/model"
+    }
+]
