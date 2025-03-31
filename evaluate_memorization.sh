@@ -2,7 +2,7 @@
 
 # Step 1: Run batch_eval.py with the baseline config
 echo "Running baseline batch evaluation..."
-python batch_push.py --model-config configs/model.json --quant-config configs/baseline-config.json --dataset "legacy-datasets/wikipedia" --num-samples 10000 --batch-size $BATCH_SIZE
+python batch_push.py --model-config configs/model.json --quant-config configs/baseline-config.json --dataset "monology/pile-uncopyrighted" --num-samples 10000 --batch-size $BATCH_SIZE
 
 # Step 2: Merge all JSON files into merged.json
 echo "Merging all JSON files into merged.json..."
@@ -23,7 +23,7 @@ swap_values=(
 # Step 4: Run batch_eval.py for each swap-every value
 for swap in "${swap_values[@]}"; do
     echo "Running batch evaluation with swap-every: $swap"
-    python batch_eval.py --model-config configs/models_$MODEL_NUM.json \
+    python batch_push.py --model-config configs/model.json \
                          --quant-config configs/quant-config.json \
                          --quant-config-swap configs/quant-config.json \
                          --num-samples 10000 \
@@ -32,9 +32,4 @@ for swap in "${swap_values[@]}"; do
                          --swap-every "$swap"
 done
 
-echo "All evaluations completed."
-echo "Begginnig github push..."
-git remote -v
-git add logs
-git commit -m "Auto update results added" || echo "commit failed"
-git push -u origin main || echo "git push failed"
+
