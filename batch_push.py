@@ -30,23 +30,7 @@ from datasets import (
 )
 
 logging.set_verbosity_error()
-def init_distributed():
-    # Set up all required environment variables if they don't exist
-    if "RANK" not in os.environ:
-        os.environ["RANK"] = "0"
-    if "WORLD_SIZE" not in os.environ:
-        os.environ["WORLD_SIZE"] = "8"  # Set to number of GPUs
-    if "LOCAL_RANK" not in os.environ:
-        os.environ["LOCAL_RANK"] = "0"
-    if "MASTER_ADDR" not in os.environ:
-        os.environ["MASTER_ADDR"] = "localhost"
-    if "MASTER_PORT" not in os.environ:
-        os.environ["MASTER_PORT"] = "12355"  # Choose any free port
 
-    # Initialize the distributed environment
-    if not dist.is_initialized():
-        dist.init_process_group(backend="nccl")
-        
 @dataclass
 class ModelConfig:
     model_name: str
@@ -579,7 +563,7 @@ def run_analysis(
     torch.cuda.empty_cache()
 
 if __name__ == "__main__":
-    init_distributed()
+    
     parser = argparse.ArgumentParser(
         description = "Analyze degree of memorization for a specified model and dataset, \
             varying quantization parameters"
