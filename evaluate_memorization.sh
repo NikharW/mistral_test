@@ -2,7 +2,7 @@
 
 # Step 1: Run batch_eval.py with the baseline config
 echo "Running baseline batch evaluation..."
-python batch_push.py --model-config configs/model_$MODEL_NUM.json --quant-config configs/baseline-config.json --dataset "monology/pile-uncopyrighted" --num-samples 100 --batch-size 4
+python batch_eval.py --model-config configs/model_$MODEL_NUM.json --quant-config configs/baseline-config.json --dataset "monology/pile-uncopyrighted" --num-samples 100 --batch-size 4
 
 # Step 2: Merge all JSON files into merged.json
 echo "Merging all JSON files into merged.json..."
