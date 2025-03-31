@@ -1,12 +1,22 @@
 #!/bin/bash
 
-# Define fixed batch size
-BATCH_SIZE=250
+# Set distributed environment variables for a single-process setup
+export MASTER_ADDR=localhost
+export MASTER_PORT=29500
+export RANK=0
+export WORLD_SIZE=1
 
-# Set environment variable and CUDA device for evaluate_memorization.sh
-RANK=0 CUDA_VISIBLE_DEVICES=0 BATCH_SIZE=$BATCH_SIZE ./evaluate_memorization.sh
+# Define fixed batch size in an array (only one value)
+batch_size=(250)
 
-# Wait for all background processes to complete
+# Launch evaluation process on GPU 0 (only one process)
+for i in {0}; do
+    (
+        CUDA_VISIBLE_DEVICES=$i BATCH_SIZE=${batch_size[$i]} ./evaluate_memorization.sh
+    ) &
+done
+
+# Wait for the background process to complete
 wait
 
 echo "All evaluations completed and results pushed."
