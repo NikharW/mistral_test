@@ -1,13 +1,8 @@
 #!/bin/bash
 
-batch_size=(250 250 500 1000)
+BATCH_SIZE = 250
 
-# Launch all evaluations in parallel
-for i in {0..3}; do
-    (
-        CUDA_VISIBLE_DEVICES=$i BATCH_SIZE=${batch_size[$i]} MODEL_NUM=$i ./evaluate_memorization.sh
-    ) &
-done
+CUDA_VISIBLE_DEVICES=0 ./evaluate_memorization.sh
 
 # Wait for all background processes to complete
 wait
